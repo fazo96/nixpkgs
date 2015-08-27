@@ -10,11 +10,13 @@ let
     categories = "Application;Development;";
   };
 in
-stdenv.mkDerivation {
-  name = "netbeans-7.4";
+stdenv.mkDerivation rec {
+  name = "netbeans-${version}";
+  version = "8.0.2";
+  date = "201411181905";
   src = fetchurl {
-    url = http://download.netbeans.org/netbeans/7.4/final/zip/netbeans-7.4-201310111528.zip;
-    sha256 = "0nrnghnsdix5cmp86xi1gmvarhjk2k8mlbld3dfa9impm8gpv6mx";
+    url = "http://download.netbeans.org/netbeans/${version}/final/zip/netbeans-${version}-${date}.zip";
+    sha256 = "bb9f31d45746263ce34f4ea138b963c8525934c9797cec88b50c66abf9c52cc1";
   };
   buildCommand = ''
     # Unpack and copy the stuff
