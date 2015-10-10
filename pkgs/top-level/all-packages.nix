@@ -13509,6 +13509,8 @@ let
 
   "2048-in-terminal" = callPackage ../games/2048-in-terminal { };
 
+  AIrium = callPackage ../games/AIrium { };
+
   airstrike = callPackage ../games/airstrike { };
 
   alienarena = callPackage ../games/alienarena { };
